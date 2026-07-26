@@ -12,7 +12,7 @@
 <meta property="og:title" content="Belter - AI music & video, made by you" />
 <meta property="og:description" content="Describe a vibe, get a full song with vocals in seconds. Then turn it into a music video starring you." />
 <meta property="og:url" content="https://belterai.app" />
-<meta property="og:image" content="vibeo-logo.png" />
+<meta property="og:image" content="belter-logo.png" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0a0b'/%3E%3Ccircle cx='50' cy='50' r='6' fill='white'/%3E%3Cg fill='none' stroke='white' stroke-width='5' stroke-linecap='round'%3E%3Cpath d='M38 38a17 17 0 000 24'/%3E%3Cpath d='M62 38a17 17 0 010 24'/%3E%3Cpath d='M30 30a28 28 0 000 40'/%3E%3Cpath d='M70 30a28 28 0 010 40'/%3E%3C/g%3E%3C/svg%3E" />
 
 <style>
@@ -369,6 +369,9 @@
   .dp-final{padding:0;background:#000}
   .dp-final video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .dp-vignette{position:absolute;inset:0;background:radial-gradient(85% 80% at 50% 38%,transparent,rgba(0,0,0,.55));z-index:2;pointer-events:none}
+  .dp-videowrap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:64px 16px 132px;z-index:5}
+  .dp-videowrap video{max-width:100%;max-height:100%;width:auto;height:100%;border-radius:18px;background:#000;box-shadow:0 24px 80px rgba(0,0,0,.6);outline:1px solid rgba(255,255,255,.10)}
+  @media(max-width:640px){ .dp-videowrap{padding:58px 10px 118px} }
   .dp-final-cta{position:absolute;left:0;right:0;bottom:7%;display:flex;flex-direction:column;align-items:center;gap:16px;opacity:0;transition:opacity .8s;z-index:6}
   .dp-final-cta.show{opacity:1}
   .dp-final-t{font-size:clamp(20px,3vw,30px);font-weight:700;letter-spacing:-.02em;text-shadow:0 2px 18px rgba(0,0,0,.85)}
@@ -455,7 +458,7 @@
       <a href="support.html">Support</a>
     </nav>
     <div class="nav-cta">
-      <a class="btn btn-primary" href="https://apps.apple.com/us/app/vibeo-ai-music/id6785634222" target="_blank" rel="noopener">Get the App</a>
+      <a class="btn btn-primary" href="https://apps.apple.com/app/id6793804695" target="_blank" rel="noopener">Get the App</a>
       <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.nav-links').style.display=(this.dataset.o=='1'?(this.dataset.o='0','none'):(this.dataset.o='1','flex')),document.querySelector('.nav-links').style.position='absolute',document.querySelector('.nav-links').style.top='64px',document.querySelector('.nav-links').style.right='24px',document.querySelector('.nav-links').style.flexDirection='column',document.querySelector('.nav-links').style.background='var(--surface)',document.querySelector('.nav-links').style.padding='18px 22px',document.querySelector('.nav-links').style.borderRadius='14px',document.querySelector('.nav-links').style.border='1px solid var(--line)'">☰</button>
     </div>
   </div>
@@ -472,14 +475,14 @@
     <span class="badge"><span class="dotlive"></span> Now available on the App Store</span>
     <h1>Imagine it. <span class="shimmer">Belter makes it.</span></h1>
  <p class="sub">Describe a vibe and get a finished song - vocals, lyrics, and cover art - in seconds. Then put your own face in a music video that performs it. No instruments, no editing, no experience.</p>
-    <div style="margin-top:30px"><a class="btn btn-primary btn-lg" href="https://apps.apple.com/us/app/vibeo-ai-music/id6785634222" target="_blank" rel="noopener">Download on the App Store</a></div>
+    <div style="margin-top:30px"><a class="btn btn-primary btn-lg" href="https://apps.apple.com/app/id6793804695" target="_blank" rel="noopener">Download on the App Store</a></div>
     <div class="trust" style="margin-top:14px;color:var(--muted);font-size:13.5px">Free to download · iPhone · iOS 26 or later</div>
   </div>
 
   <div class="wavehero">
     <div class="glowpad"></div>
     <div class="wavebars" id="wavebars"></div>
-    <a class="wave-cta" id="heroStart" href="https://apps.apple.com/us/app/vibeo-ai-music/id6785634222">▶&nbsp; See it in action</a>
+    <a class="wave-cta" id="heroStart" href="https://apps.apple.com/app/id6793804695">▶&nbsp; See it in action</a>
   </div>
   <div class="trust" style="margin-top:22px"><a href="#features" style="color:var(--muted)">See everything it does ↓</a></div>
 </div>
@@ -783,7 +786,7 @@
  <details><summary>What can I do in the AI Video feature?<span class="plus">+</span></summary><p>Two modes. Photo turns a single selfie into a video of you singing your song. Scene drops your face into an example clip and lip-syncs it to your track - great for recreating a performance with you in it.</p></details>
       <details><summary>Can I use my own voice?<span class="plus">+</span></summary><p>Yes. Record a short sample once and Belter can re-sing your songs in your own voice, keeping the original instrumental.</p></details>
       <details><summary>Do I own what I make?<span class="plus">+</span></summary><p>Everything you create stays in your library and is yours to keep and download. Use your own or properly licensed footage for Scene videos.</p></details>
-      <details><summary>How do I get Belter?<span class="plus">+</span></summary><p>Belter is available now on the App Store. It's free to download and requires an iPhone running iOS 26 or later. <a href="https://apps.apple.com/us/app/vibeo-ai-music/id6785634222" target="_blank" rel="noopener">Download it here</a> and start creating in seconds.</p></details>
+      <details><summary>How do I get Belter?<span class="plus">+</span></summary><p>Belter is available now on the App Store. It's free to download and requires an iPhone running iOS 26 or later. <a href="https://apps.apple.com/app/id6793804695" target="_blank" rel="noopener">Download it here</a> and start creating in seconds.</p></details>
     </div>
   </div>
 </section>
@@ -828,68 +831,28 @@
       <div class="foot-links">
         <div class="foot-col"><h5>Product</h5><a href="#features">Features</a><a href="#how">How it works</a><a href="#pricing">Pricing</a></div>
         <div class="foot-col"><h5>Company</h5><a href="support.html">Support</a><a href="#contact">Contact</a><a href="/privacy">Privacy</a></div>
-        <div class="foot-col"><h5>Get the app</h5><a href="https://apps.apple.com/us/app/vibeo-ai-music/id6785634222" target="_blank" rel="noopener">Download on the App Store</a><a href="#contact">Contact us</a></div>
+        <div class="foot-col"><h5>Get the app</h5><a href="https://apps.apple.com/app/id6793804695" target="_blank" rel="noopener">Download on the App Store</a><a href="#contact">Contact us</a></div>
       </div>
     </div>
     <div class="copyright"><span>© 2026 Belter. All rights reserved.</span><span>belterai.app</span></div>
   </div>
 </footer>
 
-<!-- FULL-SCREEN START-CREATING DEMO PLAYER -->
+<!-- FULL-SCREEN DEMO VIDEO -->
 <div class="dplayer" id="dplayer">
   <div class="dp-glow"></div>
-  <div class="dp-progress"><div class="dp-progress-fill" id="dpProg"></div></div>
   <button class="dp-close" id="dpClose" aria-label="Close">✕</button>
   <div class="dp-logo">
     <svg class="sig" viewBox="0 0 100 100" aria-hidden="true"><circle class="dot" cx="50" cy="50" r="6"/><g class="arc" stroke-width="5"><path d="M38 38a17 17 0 000 24"/><path d="M62 38a17 17 0 010 24"/><path d="M30 30a28 28 0 000 40"/><path d="M70 30a28 28 0 010 40"/></g></svg>
     Belter
   </div>
 
-  <div class="dp-scene" id="dpS1">
-    <div class="dp-card">
-      <div class="dp-eyebrow">Create music</div>
-      <div class="dp-prompt"><span id="dpType"></span><span class="dp-caret"></span></div>
-      <div class="dp-genbtn" id="dpGen">Generate ⚡</div>
- <div class="dp-lyrics" id="dpLyrics">[Verse]<br>Hands up the second the lights go down<br>We came alive in this crowded sound<br>[Chorus]<br>So sing it loud - tonight we own it all…</div>
-      <div class="dp-wave" id="dpWave"></div>
-    </div>
+  <div class="dp-videowrap">
+    <video id="dpDemoVid" src="belter-demo.mp4" poster="belter-demo-poster.jpg" playsinline controls preload="metadata"></video>
   </div>
 
-  <div class="dp-scene" id="dpS2">
-    <div class="dp-title">Take a selfie</div>
-    <div class="dp-phone2"><div class="ps">
-      <div class="dp-cam" id="dpCam">
-        <div class="dp-cam-top">Front camera</div>
-        <div class="dp-view"><div class="dp-face"></div><div class="dp-grid"></div><div class="dp-flash" id="dpFlash"></div></div>
-        <div class="dp-shutter" id="dpShutter"></div>
-      </div>
-      <div class="dp-up2" id="dpUp2">
-        <div class="dp-cap"><div class="f"></div></div>
-        <div class="dp-upbtn">Upload to Belter</div>
-        <div class="dp-upbar"><div class="dp-upbar-fill" id="dpUp"></div></div>
-      </div>
-    </div></div>
-  </div>
-
-  <div class="dp-scene" id="dpS3">
-    <div class="dp-title">Bringing your video to life</div>
-    <div class="dp-transform"><img src="https://znyxmxtkqbykvfutighv.supabase.co/storage/v1/object/public/generated/onboarding/stage.jpg" alt=""><div class="dp-scan"></div></div>
-  </div>
-
-  <div class="dp-scene dp-final" id="dpS4">
-    <div class="dp-concert" id="dpConcert">
-      <div class="dp-crowdwrap"><img class="dp-crowd" src="https://znyxmxtkqbykvfutighv.supabase.co/storage/v1/object/public/generated/a7e8fe38-0639-4a56-a580-9589d28b95c6-art.jpg" alt=""></div>
-      <div class="dp-lightsweep"></div>
-      <div class="dp-stageframe" id="dpStageFrame">
-        <video id="dpFinalVid" src="https://znyxmxtkqbykvfutighv.supabase.co/storage/v1/object/public/generated/e75d3ed1-dc03-414a-98b3-1f0f028ed2ea.mp4" poster="https://znyxmxtkqbykvfutighv.supabase.co/storage/v1/object/public/generated/onboarding/stage.jpg" playsinline muted preload="auto"></video>
-      </div>
-      <div class="dp-particles" id="dpParticles"></div>
-    </div>
-    <div class="dp-vignette"></div>
-    <div class="dp-final-cta" id="dpFinalCta">
-      <div class="dp-final-t">From a thought to the main stage.</div>
-      <a class="btn btn-primary btn-lg" href="https://apps.apple.com/us/app/vibeo-ai-music/id6785634222" target="_blank" rel="noopener" id="dpReal">Download Belter free</a>
-    </div>
+  <div class="dp-final-cta" id="dpFinalCta">
+    <a class="btn btn-primary btn-lg" href="https://apps.apple.com/app/id6793804695" target="_blank" rel="noopener" id="dpReal">Download Belter free</a>
   </div>
 </div>
 
@@ -920,66 +883,24 @@
     }
   })();
 
-  // full-screen "Start creating" demo player
+  // full-screen demo video ("See it in action")
   (function(){
     const dp=document.getElementById('dplayer'); if(!dp) return;
-    const SONG="https://znyxmxtkqbykvfutighv.supabase.co/storage/v1/object/public/generated/01f6e462-07b6-4364-8ff0-d166ccdea55f.mp3";
-    const PROMPT="An upbeat pop anthem with a huge sing-along chorus.";
-    const $=id=>document.getElementById(id);
-    const typeEl=$('dpType'), gen=$('dpGen'), lyr=$('dpLyrics'), wave=$('dpWave'),
-          up=$('dpUp'), prog=$('dpProg'), cta=$('dpFinalCta'), vid=$('dpFinalVid'),
-          cam=$('dpCam'), up2=$('dpUp2'), flash=$('dpFlash'), shutterBtn=$('dpShutter'),
-          concert=$('dpConcert'), particles=$('dpParticles');
-    for(let k=0;k<46;k++){ const b=document.createElement('i'); b.style.animationDelay=(Math.random()*1.2).toFixed(2)+'s'; wave.appendChild(b); }
-
- // --- Web Audio sound effects (typing, click, shutter, crowd roar) ---
-    let actx=null, roarNodes=null;
-    function sfxInit(){ try{ if(!actx) actx=new (window.AudioContext||window.webkitAudioContext)(); if(actx.state==='suspended') actx.resume(); }catch(e){} }
-    function tick(){ if(!actx)return; const t=actx.currentTime,o=actx.createOscillator(),g=actx.createGain(); o.type='square'; o.frequency.value=430+Math.random()*130; g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(0.04,t+0.004); g.gain.exponentialRampToValueAtTime(0.0001,t+0.05); o.connect(g).connect(actx.destination); o.start(t); o.stop(t+0.06); }
-    function clickSfx(){ if(!actx)return; const t=actx.currentTime,o=actx.createOscillator(),g=actx.createGain(); o.type='triangle'; o.frequency.setValueAtTime(900,t); o.frequency.exponentialRampToValueAtTime(280,t+0.09); g.gain.setValueAtTime(0.14,t); g.gain.exponentialRampToValueAtTime(0.0001,t+0.13); o.connect(g).connect(actx.destination); o.start(t); o.stop(t+0.15); }
-    function shutterSfx(){ if(!actx)return; const t=actx.currentTime,len=Math.floor(actx.sampleRate*0.12),buf=actx.createBuffer(1,len,actx.sampleRate),d=buf.getChannelData(0); for(let i=0;i<len;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/len,2); const s=actx.createBufferSource(); s.buffer=buf; const f=actx.createBiquadFilter(); f.type='highpass'; f.frequency.value=1400; const g=actx.createGain(); g.gain.value=0.28; s.connect(f).connect(g).connect(actx.destination); s.start(t); }
-    function roar(){ if(!actx)return; const len=Math.floor(actx.sampleRate*2),buf=actx.createBuffer(1,len,actx.sampleRate),d=buf.getChannelData(0); for(let i=0;i<len;i++)d[i]=Math.random()*2-1; const s=actx.createBufferSource(); s.buffer=buf; s.loop=true; const f=actx.createBiquadFilter(); f.type='bandpass'; f.frequency.value=650; f.Q.value=0.5; const g=actx.createGain(); const t=actx.currentTime; g.gain.setValueAtTime(0.0001,t); g.gain.linearRampToValueAtTime(0.18,t+1.2); g.gain.linearRampToValueAtTime(0.07,t+3); s.connect(f).connect(g).connect(actx.destination); s.start(t); roarNodes={s,g}; }
-    function stopRoar(){ if(roarNodes&&actx){ try{ roarNodes.g.gain.linearRampToValueAtTime(0.0001,actx.currentTime+0.4); roarNodes.s.stop(actx.currentTime+0.5); }catch(e){} roarNodes=null; } }
-    function buildConfetti(){ if(!particles)return; particles.innerHTML=''; const cols=['#ffb24c','#ff6a4d','#ff4d7a','#fff','#ffd36a']; for(let k=0;k<36;k++){ const i=document.createElement('i'); i.style.left=(Math.random()*100)+'%'; i.style.background=cols[k%cols.length]; i.style.width=(4+Math.random()*4)+'px'; i.style.height=(8+Math.random()*9)+'px'; i.style.animationDuration=(2.6+Math.random()*2.6)+'s'; i.style.animationDelay=(Math.random()*2.5)+'s'; particles.appendChild(i);} }
-
-    let audio=null, timers=[];
-    const T=(fn,ms)=>timers.push(setTimeout(fn,ms));
-    const scene=id=>document.querySelectorAll('.dplayer .dp-scene').forEach(s=>s.classList.toggle('on',s.id===id));
-    function reset(){
-      timers.forEach(clearTimeout); timers=[]; stopRoar();
-      if(audio){ audio.pause(); audio=null; }
-      typeEl.textContent=''; gen.classList.remove('show','click'); lyr.classList.remove('show');
-      wave.classList.remove('show'); up.classList.remove('go'); cta.classList.remove('show'); dp.classList.remove('beat');
-      if(cam)cam.classList.remove('on'); if(up2)up2.classList.remove('on'); if(flash)flash.classList.remove('go'); if(shutterBtn)shutterBtn.classList.remove('press');
-      if(concert)concert.classList.remove('wide'); if(particles)particles.innerHTML='';
-      prog.style.transition='none'; prog.style.width='0';
-      try{ vid.pause(); vid.currentTime=0; }catch(e){}
-    }
+    const vid=document.getElementById('dpDemoVid');
+    const cta=document.getElementById('dpFinalCta');
     function open(){
-      reset(); sfxInit(); dp.classList.add('open'); document.body.style.overflow='hidden';
-      requestAnimationFrame(()=>{ prog.style.transition='width 26s linear'; prog.style.width='100%'; });
-      audio=new Audio(SONG); audio.volume=0; audio.play().catch(()=>{});
-      scene('dpS1');
-      let i=0; (function type(){ if(i<=PROMPT.length){ typeEl.textContent=PROMPT.slice(0,i); if(i<PROMPT.length && PROMPT[i]!==' ') tick(); i++; T(type,52);} })();
-      T(()=>gen.classList.add('show'),2600);
-      T(()=>{ gen.classList.add('click'); clickSfx(); },3000);
-      T(()=>{ lyr.classList.add('show'); wave.classList.add('show'); dp.classList.add('beat'); if(audio)audio.volume=1; },3400);
- // Scene 2 - take a selfie
-      T(()=>{ scene('dpS2'); cam.classList.add('on'); up2.classList.remove('on'); },7000);
-      T(()=>{ shutterBtn.classList.add('press'); flash.classList.add('go'); shutterSfx(); },9000);
-      T(()=>{ cam.classList.remove('on'); up2.classList.add('on'); },9700);
-      T(()=>up.classList.add('go'),10100);
- // Scene 3 - transform
-      T(()=>scene('dpS3'),13000);
- // Scene 4 - performer singing (song stays the soundtrack, video synced)
-      T(()=>{ scene('dpS4'); vid.loop=false; vid.muted=true; try{ if(audio) vid.currentTime=Math.min(audio.currentTime,(vid.duration||28)-0.1); }catch(e){} vid.play().catch(()=>{}); },15500);
-      // Widen out into the roaring crowd
-      T(()=>{ concert.classList.add('wide'); buildConfetti(); roar(); },19000);
-      T(()=>cta.classList.add('show'),23000);
+      dp.classList.add('open'); document.body.style.overflow='hidden';
+      if(cta) cta.classList.remove('show');
+      try{ vid.currentTime=0; vid.muted=false; const pr=vid.play(); if(pr&&pr.catch) pr.catch(()=>{ vid.muted=true; vid.play().catch(()=>{}); }); }catch(e){}
     }
-    function close(){ reset(); dp.classList.remove('open'); document.body.style.overflow=''; }
-    $('dpClose').addEventListener('click',close);
-    $('dpReal').addEventListener('click',close);
+    function close(){
+      try{ vid.pause(); }catch(e){}
+      dp.classList.remove('open'); document.body.style.overflow='';
+    }
+    // Reveal the download CTA once the demo finishes.
+    if(vid) vid.addEventListener('ended',()=>{ if(cta) cta.classList.add('show'); });
+    document.getElementById('dpClose').addEventListener('click',close);
+    const real=document.getElementById('dpReal'); if(real) real.addEventListener('click',close);
     document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&dp.classList.contains('open'))close(); });
     const hs=document.getElementById('heroStart'); if(hs) hs.addEventListener('click',e=>{ e.preventDefault(); open(); });
   })();
