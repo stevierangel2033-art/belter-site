@@ -1,0 +1,7 @@
+# Belter — belterai.app
+# Everything here is public marketing. Nothing to hide from crawlers.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://belterai.app/sitemap.xml

@@ -4,8 +4,18 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Privacy Policy - Belter</title>
-<meta name="description" content="How Belter collects, uses, and protects your data, and the third-party AI services it shares data with." />
+<meta name="description" content="How Belter collects, uses and protects your data, and the third-party AI services it shares data with." />
 <meta name="theme-color" content="#0a0a0b" />
+<link rel="canonical" href="https://belterai.app/privacy/" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Belter" />
+<meta property="og:title" content="Belter Privacy Policy" />
+<meta property="og:description" content="How Belter collects, uses and protects your data, and the third-party AI services it shares data with." />
+<meta property="og:url" content="https://belterai.app/privacy/" />
+<meta property="og:image" content="https://belterai.app/belter-logo.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://belterai.app/belter-logo.png" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0a0b'/%3E%3Ccircle cx='50' cy='50' r='6' fill='white'/%3E%3Cg fill='none' stroke='white' stroke-width='5' stroke-linecap='round'%3E%3Cpath d='M38 38a17 17 0 000 24'/%3E%3Cpath d='M62 38a17 17 0 010 24'/%3E%3Cpath d='M30 30a28 28 0 000 40'/%3E%3Cpath d='M70 30a28 28 0 010 40'/%3E%3C/g%3E%3C/svg%3E" />
 <style>
   :root{
@@ -59,28 +69,38 @@
     <p class="updated">Last updated July 2026</p>
   </div>
 </div>
+
 <section>
   <div class="wrap">
     <p>This Privacy Policy explains how Belter ("we", "us", or "the app") collects, uses, and protects your information, and the third-party AI services we share data with to create your content. By using Belter, you agree to the practices described below.</p>
 
     <h2>1. Information we collect</h2>
-    <p>We collect only what we need to run the service: (a) account details from Sign in with Apple (name and email, provided by Apple on first sign-in); (b) the content you submit for generation — text prompts, lyrics, songs you create, voice recordings, and photos — which you provide directly in the app; and (c) usage and purchase information such as your credit balance and in-app purchases. We do not collect data from other sources and we do not track you across other companies' apps or websites.</p>
+    <p>We collect only what we need to run the service: (a) account details from Sign in with Apple (name and email, provided by Apple on first sign-in); (b) the content you submit for generation — text prompts, lyrics, songs you create, and voice recordings — which you provide directly in the app; and (c) usage and purchase information such as your credit balance and in-app purchases. We do not collect data from other sources and we do not track you across other companies' apps or websites.</p>
 
     <h2>2. How we use your data</h2>
-    <p>We use your data only to: generate the music, covers, and videos you request; operate your account, subscription, and credit balance; provide support; and keep the service secure. We do not sell your personal data and do not use it for advertising.</p>
+    <p>We use your data only to: generate the music, cover art, and voices you request; operate your account, subscription, and credit balance; provide support; and keep the service secure. We do not sell your personal data and do not use it for advertising.</p>
 
     <h2>3. Third-party AI services we share data with</h2>
-    <p>To produce your content, we send the material you provide to the following third-party AI processors, who use it solely to deliver their service to us:</p>
+    <!--
+      Recipients are described by role and purpose rather than by company name.
+      This wording is duplicated, close to word for word, on the in-app consent
+      screen and in the in-app Privacy Policy. KEEP ALL THREE IN STEP — an
+      earlier version of this page still listed providers the app had stopped
+      using, and the mismatch between the app and this page is what caused an
+      App Store rejection under Guideline 5.1.2(i).
+    -->
+    <p>Belter cannot generate music on your device alone. To produce your content, we send the material you provide over an encrypted connection to specialist third-party AI companies, which create the result and return it to us. We share the minimum needed, and only for the feature you asked for:</p>
     <ul>
-      <li><strong>ElevenLabs</strong> — receives your text prompts, lyrics, generated songs, and voice recordings, to generate music and convert vocals.</li>
-      <li><strong>Replicate</strong> — receives your voice recordings, to re-sing tracks in a custom voice.</li>
-      <li><strong>fal.ai</strong> — receives your photo, to create AI performance videos.</li>
-      <li><strong>Supabase</strong> — hosts our backend, database, storage, and authentication.</li>
+      <li><strong>An AI music and lyrics generation company</strong> &mdash; receives the description or lyrics you type, and the songs generated from them, to write lyrics, compose and perform the track, and, if you use the stems feature, separate it into individual parts.</li>
+      <li><strong>An AI voice company</strong> &mdash; receives your voice recording, only if you choose to clone your voice, to build a singing voice model you can reuse on your own tracks.</li>
+      <li><strong>An AI image generation company</strong> &mdash; receives your song's title and chosen style, to create the cover artwork. It never receives your lyrics or your photos.</li>
+      <li><strong>A cloud hosting provider</strong> &mdash; operates our backend, database, file storage and authentication.</li>
     </ul>
-    <p>These providers act as our processors: they process your data only to provide their service to us, do not use it for their own advertising, and are contractually required to protect it to a standard at least equivalent to this policy. We ask for your permission inside the app before sharing this data with them, and you can decline.</p>
+    <p>All of these companies act as our processors under written agreement. They may use your data only to provide their service to us. They may not use it for their own advertising, may not sell it, and may not use it to train general-purpose AI models. Each is contractually required to protect your data to a standard at least equivalent to this policy.</p>
+    <p>We ask for your permission inside the app, and show you exactly what will be sent and why, <strong>before anything is shared</strong>. If you decline, no content is sent and the generation features remain switched off. You can withdraw at any time by deleting your account.</p>
 
-    <h2>4. Voice &amp; photo data</h2>
-    <p>Voice recordings and photos are treated as sensitive. They are processed to create your requested output and, for custom voices, to build a voice model you can reuse. We do not use your recordings or photos to train general-purpose AI models, and you can request deletion of your custom voices.</p>
+    <h2>4. Voice data</h2>
+    <p>Voice recordings are treated as sensitive. Your recording is processed to build a voice model you can reuse on your own tracks. We do not use your recordings to train general-purpose AI models, and you can delete your custom voices at any time. Photos you choose as cover art stay on your device.</p>
 
     <h2>5. Public sharing &amp; the community feed</h2>
     <p>Belter includes a public community feed (Explore). <strong>Sharing is off by default</strong> and only happens if you turn it on in Settings. When it is on, the tracks you create are published to the feed along with their title, cover art, audio, and the display name on your account — these become visible to all other users of the app, so please do not put personal information in titles or lyrics you intend to share. We also record how many times a shared track is played. Turning sharing off in Settings stops future tracks from being published; to remove something already published, contact us. Reports you file and creators you block are stored so we can act on them and keep your feed filtered.</p>

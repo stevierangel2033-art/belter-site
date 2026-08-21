@@ -3,17 +3,107 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Belter - Make studio-quality songs & music videos with AI</title>
-<meta name="description" content="Belter turns a single idea into a full song - vocals, lyrics, and cover art. Then put your face in a music video that sings it. AI music, made by you." />
+<title>Belter - Make studio-quality AI songs, covers & voice clones</title>
+<meta name="description" content="Belter turns a single idea into a full song - vocals, lyrics, and cover art - in seconds. Sing it in your own voice or split it into stems. AI music, made by you." />
 <meta name="theme-color" content="#0a0a0b" />
 
-<!-- Open Graph -->
+<!-- Canonical. belterai.app resolves on both apex and www, and with or without
+     a trailing slash; without this Google treats those as separate pages and
+     splits the ranking signals between them. -->
+<link rel="canonical" href="https://belterai.app/" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+
+<!-- Open Graph. og:image MUST be absolute — Facebook, iMessage, WhatsApp and
+     Slack fetch it from their own servers, where a relative path resolves
+     against nothing and the preview comes out blank. -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Belter - AI music & video, made by you" />
-<meta property="og:description" content="Describe a vibe, get a full song with vocals in seconds. Then turn it into a music video starring you." />
-<meta property="og:url" content="https://belterai.app" />
-<meta property="og:image" content="belter-logo.png" />
+<meta property="og:site_name" content="Belter" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:title" content="Belter - AI music, made by you" />
+<meta property="og:description" content="Describe a vibe, get a full song with vocals in seconds. Then sing it in your own voice." />
+<meta property="og:url" content="https://belterai.app/" />
+<meta property="og:image" content="https://belterai.app/belter-logo.png" />
+<meta property="og:image:alt" content="Belter - AI song maker for iPhone" />
+
+<!-- Twitter/X. Without twitter:card the link renders as a bare URL. -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Belter - AI music, made by you" />
+<meta name="twitter:description" content="Describe a vibe, get a full song with vocals in seconds. Then sing it in your own voice." />
+<meta name="twitter:image" content="https://belterai.app/belter-logo.png" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0a0b'/%3E%3Ccircle cx='50' cy='50' r='6' fill='white'/%3E%3Cg fill='none' stroke='white' stroke-width='5' stroke-linecap='round'%3E%3Cpath d='M38 38a17 17 0 000 24'/%3E%3Cpath d='M62 38a17 17 0 010 24'/%3E%3Cpath d='M30 30a28 28 0 000 40'/%3E%3Cpath d='M70 30a28 28 0 010 40'/%3E%3C/g%3E%3C/svg%3E" />
+
+<!-- Structured data.
+     Two graphs, both things Google renders specially:
+       MobileApplication — can produce an app rich result with the price and
+         platform, and is how Google understands this is an iOS app rather than
+         a generic marketing page.
+       FAQPage — makes the questions at the bottom of the page eligible to
+         appear as expandable results under the main listing.
+     Every figure below MUST match the App Store and the in-app paywall. Google
+     penalises structured data that disagrees with the visible page, and Apple
+     cares that the marketing matches the product — so if pricing changes, it
+     changes in three places: App Store Connect, the app, and here.
+     NOTE: no aggregateRating. Inventing one is a manual-action risk, and Belter
+     has no public ratings yet. Add it only when the App Store has real ones. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MobileApplication",
+      "name": "Belter",
+      "alternateName": "Belter: AI Song Maker",
+      "url": "https://belterai.app/",
+      "applicationCategory": "MusicApplication",
+      "operatingSystem": "iOS 26.0 or later",
+      "description": "Belter turns a single idea into a full song - vocals, lyrics and cover art - in seconds. Sing it in your own voice, split it into stems, and share it.",
+      "installUrl": "https://apps.apple.com/app/id6793804695",
+      "featureList": [
+        "Text-to-song with real AI vocals",
+        "Write your own lyrics or generate them",
+        "Songs in any supported language",
+        "AI cover art for every song",
+        "Clone your own voice and sing your songs with it",
+        "Split any song into vocals, instrumental, drums and bass",
+        "Community feed for sharing songs"
+      ],
+      "offers": [
+        { "@type": "Offer", "name": "Free download", "price": "0", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Starter - 50 songs per month", "price": "9.99", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Pro - 150 songs per month", "price": "24.99", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "20 songs credit pack", "price": "4.99", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "90 songs credit pack", "price": "19.99", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Voice clone", "price": "9.99", "priceCurrency": "USD" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do credits work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "One credit makes one song. Splitting a song into stems costs two. Starter gives you 50 credits a month for $9.99, Pro gives you 150 for $24.99, and you can buy one-time packs any time - 20 songs for $4.99 or 90 songs for $19.99." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use my own voice?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cloning your voice is a one-time $9.99 purchase: record a short sample once, and Belter can re-sing your songs in your own voice, keeping the original instrumental." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I split a song into vocals and instrumental?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Any track can be split into vocals, instrumental, drums and bass. Mute or solo the parts you want and save your own mix back to your library. Splitting costs 2 credits." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I make songs in other languages?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Ask for the song in the language you want it sung in and Belter will write and sing the lyrics in that language." }
+        }
+      ]
+    }
+  ]
+}
+</script>
 
 <style>
   :root{
@@ -157,14 +247,6 @@
   .gtile img{width:100%;height:100%;object-fit:cover}
   .gtile .gcap{left:11px;bottom:10px}
   .note{position:absolute;color:rgba(255,255,255,.45);font-size:26px}
-  .stagewrap{position:relative;width:340px;height:380px;display:flex;align-items:center;justify-content:center}
-  .stagewrap .ring{position:absolute;width:170px;height:170px;border-radius:50%;border:1.5px solid rgba(255,255,255,.16);animation:ripple 3s ease-out infinite}
-  .stagewrap .ring:nth-child(2){animation-delay:1s}.stagewrap .ring:nth-child(3){animation-delay:2s}
-  @keyframes ripple{0%{transform:scale(1);opacity:.7}100%{transform:scale(2.2);opacity:0}}
-  .stage-img{width:188px;height:188px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.5);position:relative;z-index:2;box-shadow:0 24px 50px -16px rgba(0,0,0,.8)}
-  .nowpill{position:absolute;bottom:6px;display:flex;align-items:center;gap:11px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:10px 14px;width:250px;backdrop-filter:blur(6px);z-index:3}
-  .nowpill .np-ic{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center}
-  .avatar{width:42px;height:42px;border-radius:50%;object-fit:cover;flex:none}
 
   /* mosaic band (onboarding welcome style) */
   .mosaic-band{padding:0;position:relative;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -175,7 +257,7 @@
   .mosaic-ov h2,.mosaic-ov p,.mosaic-ov .eyebrow{text-shadow:0 2px 14px rgba(0,0,0,.8)}
   .mosaic-ov h2{font-size:clamp(26px,4vw,42px);letter-spacing:-.03em}
   .mosaic-ov p{color:var(--muted);margin-top:12px;max-width:46ch;font-size:16px}
-  @media(max-width:760px){.mosaic{grid-template-columns:repeat(3,1fr)}.collage,.stagewrap{transform:scale(.9)}}
+  @media(max-width:760px){.mosaic{grid-template-columns:repeat(3,1fr)}.collage{transform:scale(.9)}}
 
   /* small feature grid */
   .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1000px;margin:0 auto}
@@ -290,39 +372,7 @@
   .nb-s{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:220px}
   .nb-stop{flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--line2);background:transparent;color:var(--text);cursor:pointer;font-size:12px}
   .nb-stop:hover{background:rgba(255,255,255,.08)}
-  /* end-to-end demo */
-  .demo{padding:96px 0 30px}
-  .demo-stage{display:flex;justify-content:center}
-  .demo-screen{position:relative;height:100%}
-  .dstep{position:absolute;inset:0;opacity:0;transform:translateY(10px);transition:opacity .55s,transform .55s;display:flex;flex-direction:column;padding:46px 18px 20px;gap:13px;pointer-events:none}
-  .dstep.active{opacity:1;transform:none;pointer-events:auto}
-  .demo-upload,.demo-video{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/5;border:1px solid var(--line)}
-  .demo-upload img,.demo-video img,.demo-video video{width:100%;height:100%;object-fit:cover}
-  .dstep.active .demo-upload img{animation:demoIn .85s ease}
-  @keyframes demoIn{from{opacity:0;transform:scale(1.06)}to{opacity:1;transform:scale(1)}}
-  .demo-check{position:absolute;top:10px;right:10px;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#2a0d06;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
-  .demo-hint{margin-top:auto;text-align:center;font-size:13.5px;color:var(--muted)}
-  .demo-eqbig{display:flex;align-items:flex-end;justify-content:center;gap:5px;height:120px;margin-top:30px}
-  .demo-eqbig span{width:7px;border-radius:4px;background:var(--accent-grad)}
-  .dstep.active .demo-eqbig span{animation:eqbig 1s ease-in-out infinite}
-  @keyframes eqbig{0%,100%{height:14px}50%{height:108px}}
-  .demo-prog{height:6px;border-radius:4px;background:rgba(255,255,255,.12);overflow:hidden;margin-top:14px}
-  .demo-prog-fill{height:100%;width:6%;background:var(--accent-grad);border-radius:4px}
-  .dstep.active .demo-prog-fill{animation:dfill 2.8s ease forwards}
-  @keyframes dfill{to{width:100%}}
-  .dstep.active .demo-vid-img{animation:vidsway 6s ease-in-out infinite alternate}
-  @keyframes vidsway{from{transform:scale(1.05) translateX(-1.2%)}to{transform:scale(1.12) translateX(1.2%)}}
-  .demo-vid-eq{position:absolute;left:12px;bottom:12px;display:flex;align-items:flex-end;gap:3px;height:20px;z-index:2;background:rgba(0,0,0,.4);padding:5px 7px;border-radius:8px}
-  .demo-vid-eq span{width:3px;height:6px;background:#fff;border-radius:2px}
-  .dstep.active .demo-vid-eq span{animation:eqb .8s ease-in-out infinite}
-  .demo-vid-eq span:nth-child(2){animation-delay:.16s}.demo-vid-eq span:nth-child(3){animation-delay:.32s}.demo-vid-eq span:nth-child(4){animation-delay:.1s}
-  .demo-vid-badge{position:absolute;top:12px;left:12px;font-size:12px;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.25);padding:5px 10px;border-radius:999px;color:#fff;z-index:2}
-  .demo-steps{display:flex;justify-content:center;gap:13px;flex-wrap:wrap;margin-top:34px}
-  .dstepcap{display:flex;align-items:center;gap:9px;font-size:14px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:9px 16px;transition:color .3s,border-color .3s}
-  .dstepcap.on{color:var(--text);border-color:var(--accent)}
-  .dscn{width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex:none}
-  .dstepcap.on .dscn{background:var(--accent-grad);color:#2a0d06}
-  /* full-screen Start-creating demo player */
+  /* full-screen app demo player */
   .dplayer{position:fixed;inset:0;z-index:200;background:#050507;display:none;overflow:hidden;color:#fff}
   .dplayer.open{display:block}
   .dp-glow{position:absolute;inset:0;background:radial-gradient(60% 55% at 50% 46%,rgba(255,110,80,.2),transparent 70%);opacity:0;transition:opacity 1s;pointer-events:none}
@@ -333,81 +383,11 @@
   .dp-logo{position:absolute;top:22px;left:24px;z-index:30;display:flex;align-items:center;gap:9px;font-weight:700;font-size:18px;opacity:0;transition:opacity .6s}
   .dplayer.open .dp-logo{opacity:.92}
   .dp-logo .sig{width:26px;height:26px}
-  .dp-progress{position:absolute;left:0;top:0;height:3px;width:100%;background:rgba(255,255,255,.08);z-index:30}
-  .dp-progress-fill{height:100%;width:0;background:var(--accent-grad)}
-  .dp-scene{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;transform:scale(1.03);transition:opacity .7s ease,transform .7s ease;pointer-events:none;padding:24px;z-index:5}
-  .dp-scene.on{opacity:1;transform:none;pointer-events:auto}
-  .dp-card{width:min(680px,92vw);background:rgba(17,17,21,.82);border:1px solid var(--line2);border-radius:20px;padding:26px;backdrop-filter:blur(8px);position:relative;z-index:6}
-  .dp-eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:14px}
-  .dp-prompt{font-size:clamp(18px,2.4vw,26px);min-height:66px;line-height:1.3;font-weight:500}
-  .dp-caret{display:inline-block;width:2px;height:1.05em;background:var(--accent);margin-left:2px;vertical-align:-2px;animation:caret .8s step-end infinite}
-  @keyframes caret{50%{opacity:0}}
-  .dp-genbtn{margin-top:18px;display:inline-block;background:var(--accent-grad);color:#2a0d06;font-weight:700;padding:12px 24px;border-radius:999px;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .15s}
-  .dp-genbtn.show{opacity:1;transform:none}
-  .dp-genbtn.click{transform:scale(.93)}
-  .dp-lyrics{margin-top:18px;max-height:0;overflow:hidden;opacity:0;transition:opacity .5s,max-height .5s;font-size:14.5px;color:var(--muted);line-height:1.95}
-  .dp-lyrics.show{max-height:200px;opacity:1}
-  .dp-wave{display:flex;align-items:flex-end;justify-content:center;gap:3px;height:0;margin-top:8px;transition:height .4s;overflow:hidden}
-  .dp-wave.show{height:74px}
-  .dp-wave i{width:4px;border-radius:3px;background:var(--accent-grad);height:8px}
-  .dp-wave.show i{animation:eqbig 1s ease-in-out infinite}
-  .dp-title{font-size:clamp(22px,3.4vw,34px);font-weight:700;letter-spacing:-.02em;margin-bottom:26px;text-align:center}
-  .dp-phone2{width:228px;border-radius:34px;background:linear-gradient(#202024,#0d0d0f);padding:9px;box-shadow:0 30px 70px -24px #000;z-index:6}
-  .dp-phone2 .ps{background:#0a0a0b;border-radius:26px;overflow:hidden;height:414px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:18px}
-  .dp-selfie{width:148px;height:148px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.3)}
-  .dp-selfie img{width:100%;height:100%;object-fit:cover}
-  .dp-upbtn{background:#fff;color:#0a0a0b;font-weight:700;font-size:14px;padding:11px 20px;border-radius:999px}
-  .dp-upbar{width:168px;height:6px;border-radius:4px;background:rgba(255,255,255,.14);overflow:hidden}
-  .dp-upbar-fill{height:100%;width:0;background:var(--accent-grad)}
-  .dp-upbar-fill.go{animation:upfill 2.2s ease forwards}
-  @keyframes upfill{to{width:100%}}
-  .dp-transform{position:relative;width:min(330px,80vw);aspect-ratio:3/4;border-radius:22px;overflow:hidden;border:1px solid var(--line2);z-index:6}
-  .dp-transform img{width:100%;height:100%;object-fit:cover}
-  .dp-scan{position:absolute;left:-5%;right:-5%;height:36%;top:-45%;background:linear-gradient(transparent,rgba(255,110,80,.6),transparent);box-shadow:0 0 34px rgba(255,110,80,.6)}
-  .dp-scene.on .dp-scan{animation:scan 2.6s ease-in-out forwards}
-  @keyframes scan{0%{top:-45%}100%{top:125%}}
-  .dp-final{padding:0;background:#000}
-  .dp-final video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .dp-vignette{position:absolute;inset:0;background:radial-gradient(85% 80% at 50% 38%,transparent,rgba(0,0,0,.55));z-index:2;pointer-events:none}
   .dp-videowrap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:64px 16px 132px;z-index:5}
   .dp-videowrap video{max-width:100%;max-height:100%;width:auto;height:100%;border-radius:18px;background:#000;box-shadow:0 24px 80px rgba(0,0,0,.6);outline:1px solid rgba(255,255,255,.10)}
   @media(max-width:640px){ .dp-videowrap{padding:58px 10px 118px} }
   .dp-final-cta{position:absolute;left:0;right:0;bottom:7%;display:flex;flex-direction:column;align-items:center;gap:16px;opacity:0;transition:opacity .8s;z-index:6}
   .dp-final-cta.show{opacity:1}
-  .dp-final-t{font-size:clamp(20px,3vw,30px);font-weight:700;letter-spacing:-.02em;text-shadow:0 2px 18px rgba(0,0,0,.85)}
-  /* selfie capture */
-  .dp-cam,.dp-up2{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px;opacity:0;transition:opacity .45s;pointer-events:none}
-  .dp-cam.on,.dp-up2.on{opacity:1}
-  .dp-cam-top{font-size:10.5px;color:var(--faint);letter-spacing:.14em;text-transform:uppercase}
-  .dp-view{position:relative;width:172px;height:228px;border-radius:18px;overflow:hidden;border:2px solid rgba(255,255,255,.28)}
-  .dp-face{position:absolute;inset:0;background-image:url(https://znyxmxtkqbykvfutighv.supabase.co/storage/v1/object/public/generated/onboarding/stage.jpg);background-size:330%;background-position:50% 20%}
-  .dp-grid{position:absolute;inset:12px;border:1px solid rgba(255,255,255,.3);border-radius:10px}
-  .dp-flash{position:absolute;inset:0;background:#fff;opacity:0}
-  .dp-flash.go{animation:flash .55s ease}
-  @keyframes flash{0%{opacity:0}12%{opacity:.95}100%{opacity:0}}
-  .dp-shutter{width:60px;height:60px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.35),0 0 0 6px #0a0a0b}
-  .dp-shutter.press{animation:press .28s ease}
-  @keyframes press{50%{transform:scale(.85)}}
-  .dp-cap{width:126px;height:126px;border-radius:50%;overflow:hidden;border:2px solid var(--accent)}
-  .dp-cap .f{width:100%;height:100%;background-image:url(https://znyxmxtkqbykvfutighv.supabase.co/storage/v1/object/public/generated/onboarding/stage.jpg);background-size:330%;background-position:50% 20%}
-  /* concert finale composite */
-  .dp-concert{position:absolute;inset:0;overflow:hidden;background:#000}
-  .dp-crowdwrap{position:absolute;inset:0;opacity:0;transition:opacity 1.1s ease}
-  .dp-concert.wide .dp-crowdwrap{opacity:1;animation:crowdbob .52s ease-in-out infinite}
-  @keyframes crowdbob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-  .dp-crowd{width:100%;height:100%;object-fit:cover;transform:scale(1.16)}
-  .dp-concert.wide .dp-crowd{animation:crowdzoom 9s ease-out forwards}
-  @keyframes crowdzoom{from{transform:scale(1.16)}to{transform:scale(1.03)}}
-  .dp-lightsweep{position:absolute;inset:0;z-index:2;opacity:0;transition:opacity 1s;background:radial-gradient(45% 38% at 50% 10%,rgba(255,175,95,.42),transparent 62%);mix-blend-mode:screen}
-  .dp-concert.wide .dp-lightsweep{opacity:1;animation:lp 1.05s ease-in-out infinite}
-  @keyframes lp{50%{opacity:.5}}
-  .dp-stageframe{position:absolute;inset:0;z-index:3;overflow:hidden;top:0;left:0;width:100%;height:100%;transition:top 2.6s cubic-bezier(.4,0,.2,1),left 2.6s cubic-bezier(.4,0,.2,1),width 2.6s cubic-bezier(.4,0,.2,1),height 2.6s cubic-bezier(.4,0,.2,1),border-radius 2.6s,box-shadow 2.6s}
-  .dp-stageframe video{width:100%;height:100%;object-fit:cover}
-  .dp-concert.wide .dp-stageframe{top:31%;left:39%;width:22%;height:17%;border-radius:7px;box-shadow:0 0 42px rgba(255,150,90,.6),0 0 0 2px rgba(255,255,255,.35),0 14px 40px rgba(0,0,0,.7)}
-  .dp-particles{position:absolute;inset:0;z-index:4;pointer-events:none;overflow:hidden}
-  .dp-particles i{position:absolute;top:-12px;border-radius:1px;opacity:0}
-  .dp-concert.wide .dp-particles i{animation:confetti linear infinite}
-  @keyframes confetti{0%{transform:translateY(-12px) rotate(0);opacity:1}100%{transform:translateY(108vh) rotate(540deg);opacity:.5}}
  @keyframes marq{to{transform:translateX(calc(-50% - 8px))}}
   .coverstrip::before,.coverstrip::after{content:"";position:absolute;top:0;bottom:0;width:140px;z-index:2;pointer-events:none}
   .coverstrip::before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}
@@ -474,7 +454,7 @@
   <div class="wrap">
     <span class="badge"><span class="dotlive"></span> Now available on the App Store</span>
     <h1>Imagine it. <span class="shimmer">Belter makes it.</span></h1>
- <p class="sub">Describe a vibe and get a finished song - vocals, lyrics, and cover art - in seconds. Then put your own face in a music video that performs it. No instruments, no editing, no experience.</p>
+ <p class="sub">Describe a vibe and get a finished song - vocals, lyrics, and cover art - in seconds. Sing it in your own voice, split it into stems, and share it anywhere. No instruments, no editing, no experience.</p>
     <div style="margin-top:30px"><a class="btn btn-primary btn-lg" href="https://apps.apple.com/app/id6793804695" target="_blank" rel="noopener">Download on the App Store</a></div>
     <div class="trust" style="margin-top:14px;color:var(--muted);font-size:13.5px">Free to download · iPhone · iOS 26 or later</div>
   </div>
@@ -506,7 +486,7 @@
   <div class="wrap sec-head reveal">
     <span class="eyebrow">Your pocket studio</span>
     <h2 style="margin-top:14px">The whole studio fits in your hand.</h2>
- <p>Write, sing, remix, and film - all from one app.</p>
+ <p>Write, sing, remix, and share - all from one app.</p>
   </div>
   <div class="wrap"><div class="phones-row reveal">
     <div class="phone"><div class="screen"><div class="notch"></div>
@@ -517,7 +497,7 @@
         <div class="field">a dreamy synth-pop love song about driving home at sunrise, soft female vocals…</div>
         <div class="label">Mood</div>
         <div class="chips"><span class="chip">Happy</span><span class="chip on">Dreamy</span><span class="chip">Chill</span><span class="chip">Confident</span></div>
-        <div class="cta-btn">Generate · 10 credits</div>
+        <div class="cta-btn">Generate · 1 credit</div>
       </div>
     </div></div>
 
@@ -534,59 +514,16 @@
 
     <div class="phone"><div class="screen"><div class="notch"></div>
       <div class="scr" style="gap:12px">
-        <div class="scr-top"><div class="scr-title">AI Video</div><div class="pill"><span class="bolt">⚡</span> 90</div></div>
-        <div class="seg"><span>Photo</span><span class="on">Scene</span></div>
+        <div class="scr-top"><div class="scr-title">Stems</div><div class="pill"><span class="bolt">⚡</span> 90</div></div>
+        <div class="seg"><span class="on">Split</span><span>My mixes</span></div>
         <div class="label">Song</div>
         <div class="row-tile"><div class="thumb"></div><div><div class="tline" style="font-size:13.5px">Sunrise Lovesong</div><div class="tsmall">Your song</div></div></div>
-        <div class="label">Your Photo</div>
-        <div class="row-tile"><div class="thumb" style="border-radius:50%"></div><div class="tline" style="font-size:13px">Photo added ✓</div></div>
-        <div class="cta-btn">Generate Video · 21 credits</div>
+        <div class="label">Parts</div>
+        <div class="chips"><span class="chip on">Vocals</span><span class="chip on">Instrumental</span><span class="chip">Drums</span><span class="chip">Bass</span></div>
+        <div class="cta-btn">Split into stems · 2 credits</div>
       </div>
     </div></div>
   </div></div>
-</section>
-
-<!-- DEMO: photo -> song -> music video -->
-<section class="demo" id="demo">
-  <div class="wrap sec-head reveal">
-    <span class="eyebrow">See it work</span>
-    <h2 style="margin-top:14px">Your photo becomes a music video.</h2>
- <p>Add a photo, describe a song, and Belter performs it back to you - sung, on camera.</p>
-  </div>
-  <div class="wrap demo-stage reveal">
-    <div class="phone"><div class="screen"><div class="notch"></div>
-      <div class="demo-screen">
-        <div class="dstep active" data-step="0">
-          <div class="scr-top"><div class="scr-title">AI Video</div><div class="pill"><span class="bolt">⚡</span> 90</div></div>
-          <div class="label">Your Photo</div>
-          <div class="demo-upload"><img src="https://znyxmxtkqbykvfutighv.supabase.co/storage/v1/object/public/generated/avatars/bella.jpg" alt=""><div class="demo-check">✓</div></div>
-          <div class="demo-hint">Photo added</div>
-        </div>
-        <div class="dstep" data-step="1">
-          <div class="scr-top"><div class="scr-title">Create Music</div><div class="pill"><span class="bolt">⚡</span> 90</div></div>
-          <div class="label">Describe your song</div>
-          <div class="field" style="min-height:58px">a soulful, emotional ballad with powerful female vocals</div>
-          <div class="demo-eqbig"><span style="height:20px"></span><span style="height:60px"></span><span style="height:34px"></span><span style="height:90px"></span><span style="height:48px"></span><span style="height:104px"></span><span style="height:40px"></span><span style="height:74px"></span><span style="height:28px"></span><span style="height:84px"></span><span style="height:50px"></span></div>
-          <div class="demo-prog"><div class="demo-prog-fill"></div></div>
-          <div class="demo-hint">Composing your song…</div>
-        </div>
-        <div class="dstep" data-step="2">
-          <div class="scr-top"><div class="scr-title">Music Video</div><div class="pill"><span class="bolt">⚡</span> 90</div></div>
-          <div class="demo-video" id="demoVideoWrap">
-            <video class="demo-vid-el" src="https://znyxmxtkqbykvfutighv.supabase.co/storage/v1/object/public/generated/51533ea4-c1f8-4d78-8dc9-59fda27fb940.mp4" poster="https://znyxmxtkqbykvfutighv.supabase.co/storage/v1/object/public/generated/avatars/bella.jpg" autoplay muted loop playsinline preload="metadata"></video>
-            <div class="demo-vid-badge">▶ Music video</div>
-            <div class="demo-vid-eq"><span></span><span></span><span></span><span></span></div>
-          </div>
- <div class="demo-hint">Your music video is ready - starring you.</div>
-        </div>
-      </div>
-    </div></div>
-  </div>
-  <div class="wrap demo-steps reveal">
-    <div class="dstepcap" data-cap="0"><span class="dscn">1</span> Add your photo</div>
-    <div class="dstepcap" data-cap="1"><span class="dscn">2</span> Create the song</div>
-    <div class="dstepcap" data-cap="2"><span class="dscn">3</span> Get your music video</div>
-  </div>
 </section>
 
 <!-- WHAT IS IT -->
@@ -594,7 +531,7 @@
   <div class="wrap sec-head reveal">
     <span class="eyebrow">What is Belter</span>
     <h2 style="margin-top:14px">A whole music studio, distilled into a few taps.</h2>
- <p>Behind the scenes Belter orchestrates best-in-class AI - songwriting, studio vocals, voice conversion, cover art, and talking-video - so you don't have to touch a DAW, a mic, or an editor. You bring the idea. Belter brings the production.</p>
+ <p>Behind the scenes Belter orchestrates best-in-class AI - songwriting, studio vocals, voice cloning, stem separation, and cover art - so you don't have to touch a DAW, a mic, or an editor. You bring the idea. Belter brings the production.</p>
   </div>
 </section>
 
@@ -626,6 +563,7 @@
       <div class="flist">
         <div class="li"><span class="ck">✓</span> Full songs with lead vocals, not just loops</div>
         <div class="li"><span class="ck">✓</span> Song or instrumental, any genre</div>
+        <div class="li"><span class="ck">✓</span> Ask for it in any language</div>
         <div class="li"><span class="ck">✓</span> Auto-generated cover art for every track</div>
       </div>
     </div>
@@ -651,7 +589,8 @@
       <div class="flist">
         <div class="li"><span class="ck">✓</span> One prompt → structured verses & chorus</div>
         <div class="li"><span class="ck">✓</span> Length-aware: short hook or full song</div>
-        <div class="li"><span class="ck">✓</span> Mood presets tune tempo & energy</div>
+        <div class="li"><span class="ck">✓</span> Edit any line and regenerate the song</div>
+        <div class="li"><span class="ck">✓</span> Tempo &amp; energy sliders shape the feel</div>
       </div>
     </div>
     <div class="fvisual">
@@ -676,7 +615,7 @@
       <p>Re-sing any track in a preset voice, or train a model from a short recording of yourself and hear your songs in your own voice. The instrumental stays; only the vocal changes.</p>
       <div class="flist">
         <div class="li"><span class="ck">✓</span> Preset voices, instantly</div>
-        <div class="li"><span class="ck">✓</span> Train your own voice from a clip</div>
+        <div class="li"><span class="ck">✓</span> Clone your own voice once - $9.99, one-time</div>
         <div class="li"><span class="ck">✓</span> Clean vocal swap over the original mix</div>
       </div>
     </div>
@@ -685,27 +624,31 @@
     </div>
   </div>
 
- <!-- 4 AI Video -->
+ <!-- 4 Stems -->
   <div class="feature rev reveal">
     <div class="ftext">
-      <span class="eyebrow">AI Video</span>
-      <h3>Put yourself in the music video.</h3>
- <p>Two ways to star in your own video. <b>Photo</b> animates your face to sing the song. <b>Scene</b> places your face into an example clip and lip-syncs it to your track - your performance, your footage.</p>
+      <span class="eyebrow">Stems &amp; Mixing</span>
+ <h3>Pull a song apart. Keep the mix you want.</h3>
+      <p>Split any track into vocals, instrumental, drums, and bass. Mute what you don't need, keep what you do, and save the result as your own version - a karaoke backing track, an acapella, or a stripped-back remix.</p>
       <div class="flist">
-        <div class="li"><span class="ck">✓</span> Photo mode: your face sings, from one selfie</div>
-        <div class="li"><span class="ck">✓</span> Scene mode: face-swap into a clip, then lip-sync</div>
-        <div class="li"><span class="ck">✓</span> Saved to your library with cover art</div>
+        <div class="li"><span class="ck">✓</span> Vocals, instrumental, drums and bass</div>
+        <div class="li"><span class="ck">✓</span> Mute or solo any part, then save your mix</div>
+        <div class="li"><span class="ck">✓</span> Your mix lands in your library like any song</div>
       </div>
     </div>
     <div class="fvisual">
-      <div class="stagewrap">
-        <span class="ring"></span><span class="ring"></span><span class="ring"></span>
-        <img class="stage-img" src="https://znyxmxtkqbykvfutighv.supabase.co/storage/v1/object/public/generated/onboarding/stage.jpg" alt="Perform your song" loading="lazy">
-        <span class="note" style="left:18px;top:30px">♪</span>
-        <span class="note" style="right:24px;top:40px;font-size:24px">♫</span>
-        <span class="note" style="right:40px;bottom:120px;font-size:22px">♪</span>
-        <div class="nowpill"><div class="np-ic">♪</div><div><div style="font-weight:600;font-size:14px">Your Song</div><div class="tsmall">Music Video</div></div></div>
-      </div>
+      <div class="phone"><div class="screen"><div class="notch"></div>
+        <div class="scr">
+          <div class="scr-top"><div class="scr-title">Stems</div><div class="pill"><span class="bolt">⚡</span> 90</div></div>
+          <div class="row-tile"><div class="thumb"></div><div><div class="tline" style="font-size:13.5px">Sunrise Lovesong</div><div class="tsmall">Your song</div></div></div>
+          <div class="label">Parts</div>
+          <div class="row-tile"><div><div class="tline" style="font-size:13.5px">Vocals</div><div class="tsmall">On</div></div></div>
+          <div class="row-tile"><div><div class="tline" style="font-size:13.5px">Instrumental</div><div class="tsmall">On</div></div></div>
+          <div class="row-tile"><div><div class="tline" style="font-size:13.5px">Drums</div><div class="tsmall">Muted</div></div></div>
+          <div class="row-tile"><div><div class="tline" style="font-size:13.5px">Bass</div><div class="tsmall">Muted</div></div></div>
+          <div class="cta-btn">Save my mix</div>
+        </div>
+      </div></div>
     </div>
   </div>
 </section>
@@ -718,9 +661,10 @@
       <h2 style="margin-top:14px">Everything you need to finish a track.</h2>
     </div>
     <div class="grid3">
- <div class="gcard reveal"><div class="gi">🎚️</div><h4>Mood presets</h4><p>Happy, Chill, Confident, Dreamy - each one tunes tempo and energy so your song feels right instantly.</p></div>
- <div class="gcard reveal"><div class="gi">🔁</div><h4>Reverse</h4><p>Flip any track backwards on-device with one tap. No AI, no network - just instant creative effects.</p></div>
-      <div class="gcard reveal"><div class="gi">📚</div><h4>Your library</h4><p>Every song, cover, and video saved in one place. Shuffle, repeat, and a full-screen player built in.</p></div>
+ <div class="gcard reveal"><div class="gi">🎚️</div><h4>Tempo &amp; energy</h4><p>Two sliders steer the feel, from slow and calm to fast and loud, alongside genre, vocal style and a studio or live sound.</p></div>
+ <div class="gcard reveal"><div class="gi">🗣️</div><h4>Any language</h4><p>Ask for your song in the language you want it sung in - the lyrics are written and performed in that language.</p></div>
+ <div class="gcard reveal"><div class="gi">🔁</div><h4>Variations</h4><p>Generate up to four takes of the same idea at once, then keep the one you like best.</p></div>
+      <div class="gcard reveal"><div class="gi">📚</div><h4>Your library</h4><p>Every song, cover, and mix saved in one place. Shuffle, repeat, and a full-screen player built in.</p></div>
       <div class="gcard reveal"><div class="gi">🔒</div><h4>Lock-screen controls</h4><p>Play in the background with Now Playing art and Control Center support, just like your music app.</p></div>
       <div class="gcard reveal"><div class="gi">🖼️</div><h4>Custom covers</h4><p>Don't love the auto art? Swap any track's cover with a photo from your library in a tap.</p></div>
       <div class="gcard reveal"><div class="gi">🍎</div><h4>Sign in with Apple</h4><p>Private, password-free sign-in. Your creations sync and stay yours across devices.</p></div>
@@ -733,12 +677,12 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">How it works</span>
-      <h2 style="margin-top:14px">From idea to finished video in three steps.</h2>
+      <h2 style="margin-top:14px">From idea to finished song in three steps.</h2>
     </div>
     <div class="steps">
-      <div class="step reveal"><h4>Describe it</h4><p>Type the vibe you want and pick a mood. Add your own lyrics or let Belter write them.</p></div>
+      <div class="step reveal"><h4>Describe it</h4><p>Type the vibe you want and pick a mood. Add your own lyrics or let Belter write them - in any language.</p></div>
       <div class="step reveal"><h4>Generate</h4><p>Belter composes a full song with vocals and cover art in seconds. Make a few takes and keep your favorite.</p></div>
-      <div class="step reveal"><h4>Star in it</h4><p>Add a photo or a clip and turn your song into a music video that features you, lip-synced and ready to share.</p></div>
+      <div class="step reveal"><h4>Make it yours</h4><p>Re-sing it in your own voice, split it into stems, or tweak the lyrics. Then post it to the Explore feed or share it with anyone.</p></div>
     </div>
   </div>
 </section>
@@ -748,31 +692,31 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Pricing</span>
-      <h2 style="margin-top:14px">Simple plans. Credits that refill every month.</h2>
-      <p>Songs, covers, and videos each cost credits. Pick a plan, create all month, and keep everything you make.</p>
+      <h2 style="margin-top:14px">Simple plans. One credit, one song.</h2>
+      <p>Every song you generate costs one credit. Splitting a song into stems costs two. Subscribe for a monthly allowance, or buy a one-time pack whenever you need more.</p>
     </div>
     <div class="prices">
       <div class="price reveal">
         <h4>Starter</h4>
-        <div class="amt">$19.99<span>/mo</span></div>
-        <div class="cr">45 credits / month</div>
-        <ul><li>~4 full songs a month</li><li>Voice covers</li><li>AI videos</li><li>Keep everything you make</li></ul>
+        <div class="amt">$9.99<span>/mo</span></div>
+        <div class="cr">50 songs per month</div>
+        <ul><li>50 credits, refilled every month</li><li>Voice covers and stem splitting</li><li>AI cover art on every song</li><li>Keep everything you make</li></ul>
       </div>
       <div class="price pop reveal">
         <div class="tag">Most popular</div>
-        <h4>Plus</h4>
-        <div class="amt">$39.99<span>/mo</span></div>
-        <div class="cr">90 credits / month</div>
-        <ul><li>~9 full songs a month</li><li>Everything in Starter</li><li>Priority generation</li><li>Train your own voice</li></ul>
+        <h4>Pro</h4>
+        <div class="amt">$24.99<span>/mo</span></div>
+        <div class="cr">150 songs per month</div>
+        <ul><li>150 credits, refilled every month</li><li>Everything in Starter</li><li>Best value per song</li></ul>
       </div>
       <div class="price reveal">
-        <h4>Pro</h4>
-        <div class="amt">$79.99<span>/mo</span></div>
-        <div class="cr">180 credits / month</div>
-        <ul><li>~18 full songs a month</li><li>Everything in Plus</li><li>Most AI videos</li><li>Best value per credit</li></ul>
+        <h4>Credit packs</h4>
+        <div class="amt">$4.99<span> one-time</span></div>
+        <div class="cr">20 songs, no subscription</div>
+        <ul><li>Or 90 songs for $19.99</li><li>One-time purchase</li><li>Top up any time</li></ul>
       </div>
     </div>
-    <p class="price-note">Need more? Top-up credit packs available any time. Manage or cancel your plan anytime in your App Store account settings.</p>
+    <p class="price-note">Clone your voice: $9.99, one-time. Manage or cancel your plan anytime in your App Store account settings.</p>
   </div>
 </section>
 
@@ -782,10 +726,11 @@
     <div class="sec-head reveal"><span class="eyebrow">FAQ</span><h2 style="margin-top:14px">Good questions.</h2></div>
     <div class="faq reveal">
       <details><summary>Do I need any musical skill?<span class="plus">+</span></summary><p>None at all. If you can describe a vibe in a sentence, you can make a song. Belter handles the writing, singing, mixing, and artwork.</p></details>
- <details><summary>How do credits work?<span class="plus">+</span></summary><p>Each creation uses credits - a song is a flat cost, and videos scale with the song's length since longer renders cost more to produce. Your plan refills credits every month, and you can top up any time.</p></details>
- <details><summary>What can I do in the AI Video feature?<span class="plus">+</span></summary><p>Two modes. Photo turns a single selfie into a video of you singing your song. Scene drops your face into an example clip and lip-syncs it to your track - great for recreating a performance with you in it.</p></details>
-      <details><summary>Can I use my own voice?<span class="plus">+</span></summary><p>Yes. Record a short sample once and Belter can re-sing your songs in your own voice, keeping the original instrumental.</p></details>
-      <details><summary>Do I own what I make?<span class="plus">+</span></summary><p>Everything you create stays in your library and is yours to keep and download. Use your own or properly licensed footage for Scene videos.</p></details>
+ <details><summary>How do credits work?<span class="plus">+</span></summary><p>One credit makes one song. Splitting a song into stems costs two. Starter gives you 50 credits a month for $9.99, Pro gives you 150 for $24.99, and you can buy one-time packs any time - 20 songs for $4.99 or 90 songs for $19.99.</p></details>
+ <details><summary>Can I make songs in other languages?<span class="plus">+</span></summary><p>Yes. Ask for the song in any language in your description, or write your own lyrics in it, and Belter will sing it back in that language.</p></details>
+      <details><summary>Can I use my own voice?<span class="plus">+</span></summary><p>Yes. Cloning your voice is a one-time $9.99 purchase: record a short sample once, and Belter can re-sing your songs in your own voice, keeping the original instrumental.</p></details>
+      <details><summary>Can I split a song into vocals and instrumental?<span class="plus">+</span></summary><p>Yes. Any track can be split into vocals, instrumental, drums, and bass. Mute or solo the parts you want and save your own mix back to your library. Splitting costs 2 credits.</p></details>
+      <details><summary>Do I own what I make?<span class="plus">+</span></summary><p>Everything you create stays in your library and is yours to keep and download. Sharing a song to the Explore feed is entirely up to you.</p></details>
       <details><summary>How do I get Belter?<span class="plus">+</span></summary><p>Belter is available now on the App Store. It's free to download and requires an iPhone running iOS 26 or later. <a href="https://apps.apple.com/app/id6793804695" target="_blank" rel="noopener">Download it here</a> and start creating in seconds.</p></details>
     </div>
   </div>
@@ -826,7 +771,7 @@
           <svg class="logo sig" viewBox="0 0 100 100" aria-hidden="true"><circle class="dot" cx="50" cy="50" r="6"/><g class="arc" stroke-width="5"><path d="M38 38a17 17 0 000 24"/><path d="M62 38a17 17 0 010 24"/><path d="M30 30a28 28 0 000 40"/><path d="M70 30a28 28 0 010 40"/></g></svg>
           Belter
         </a>
-        <p>AI music & video, made by you. Your pocket recording studio.</p>
+        <p>AI music, made by you. Your pocket recording studio.</p>
       </div>
       <div class="foot-links">
         <div class="foot-col"><h5>Product</h5><a href="#features">Features</a><a href="#how">How it works</a><a href="#pricing">Pricing</a></div>
@@ -913,18 +858,6 @@
     const f=document.querySelector('.contact-form'); if(f) f.reset();
     setTimeout(()=>{ document.getElementById('contact').scrollIntoView({behavior:'smooth',block:'center'}); },300);
     if(history.replaceState) history.replaceState(null,'',location.pathname+'#contact');
-  })();
-
-  // auto-cycling photo -> song -> video demo
-  (function(){
-    const steps=document.querySelectorAll('.demo .dstep');
-    const caps=document.querySelectorAll('.demo .dstepcap');
-    if(!steps.length) return;
-    const dur=[2600,3400,4600]; let i=0;
-    function show(n){ steps.forEach((s,k)=>s.classList.toggle('active',k===n)); caps.forEach((c,k)=>c.classList.toggle('on',k===n)); }
-    show(0);
-    function next(){ i=(i+1)%steps.length; show(i); setTimeout(next,dur[i]); }
-    setTimeout(next,dur[0]);
   })();
 
   // duplicate cover cards, inject equalizers, wire genre previews + now-playing bar
